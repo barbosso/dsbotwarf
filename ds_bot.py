@@ -31,7 +31,7 @@ for filename in os.listdir('./cogs'):
 # Events
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game('Warface'))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game('Warface. !help - для справки'))
     print("Bot Online!")
 
 
