@@ -15,7 +15,10 @@ class Warface(commands.Cog):
         text = arg
         r = requests.get("http://api.warface.ru/user/stat/?name={}&server=2".format(text))
         response_json = r.json()
-        nick = response_json['nickname']
+        try:
+            nick = response_json['nickname']
+        except KeyError:
+            nick = (f"Нет данных об игроке")
         try:
             clan = response_json['clan_name']
         except KeyError:
