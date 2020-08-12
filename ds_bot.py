@@ -29,7 +29,7 @@ for filename in os.listdir('./cogs'):
         client.load_extension(f"cogs.{filename[:-3]}")
 
 # Events
-@client.event()
+@client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.idle, activity=discord.Game('Warface'))
     print("Bot Online!")
