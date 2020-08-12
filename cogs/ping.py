@@ -19,6 +19,7 @@ class Ping(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
+        await client.change_presence(status=discord.Status.idle, activity=discord.Game('Warface'))
         print("Bot Online!")
 
     @commands.Cog.listener()
