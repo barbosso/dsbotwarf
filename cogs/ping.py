@@ -15,13 +15,6 @@ class Ping(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-# Events
-
-    @commands.Cog.listener()
-    async def on_ready(self):
-        await client.change_presence(status=discord.Status.idle, activity=discord.Game('Warface'))
-        print("Bot Online!")
-
     @commands.Cog.listener()
     async def on_message(self, message):
         for i in hello_msg:

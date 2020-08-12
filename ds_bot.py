@@ -7,6 +7,12 @@ client = commands.Bot(command_prefix="!")
 
 client.remove_command("help")
 
+# Events
+@client.event()
+async def on_ready(self):
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game('Warface'))
+    print("Bot Online!")
+
 
 @client.command()
 @commands.has_permissions(administrator= True)
